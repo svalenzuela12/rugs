@@ -22,7 +22,6 @@ def TestRug(num, dimensions, squareSize, colors, outQueue, lock):
     #Test rug
     for y in range(dimensions[1] - (squareSize[1] - 1)):
         currentColor = -1
-        colorXCount = 0
         for x in range (dimensions[0]):
             if rug[y][x] == currentColor:
                 colorXCount += 1
@@ -37,7 +36,7 @@ def TestRug(num, dimensions, squareSize, colors, outQueue, lock):
                         return
             else:
                 currentColor = rug[y][x]
-                colorXCount = 0
+                colorXCount = 1
 
     #This goes slightly faster if we don't print every rug, but it's boring :)
     lock.acquire()
