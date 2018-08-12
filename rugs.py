@@ -36,7 +36,7 @@ def TestRug(num, dimensions, squareSize, colors, outQueue, lock):
                         outQueue.put(True)
                         return
             else:
-                currentColor = rug[x][y]
+                currentColor = rug[y][x]
                 colorXCount = 0
 
     #This goes slightly faster if we don't print every rug, but it's boring :)
